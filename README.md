@@ -256,6 +256,6 @@ If TCT is useful to you and you'd like to support its development:
 
 If you like **TCT**, consider starring the repository on GitHub.
 
-<a href="LICENSE">See LICENSE</a>
+<a href="LICENSE.md">See LICENSE</a>
 
 </div>
