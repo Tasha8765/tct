@@ -1,4 +1,3 @@
-```yaml
 # ==============================================================================
 # TCT FULL MULTI-TENANT CONFIGURATION FILE (tctfile)
 # YAML Format | Supports up to 5 Bot Sessions
@@ -189,4 +188,3 @@ BOTS:
 #    huge lists. To customize images/locks for a specific bot, just replace the
 #    `*default_...` with your own list/map inside that bot's block.
 # ==============================================================================
-```
