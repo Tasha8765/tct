@@ -1,3 +1,4 @@
+```yaml
 # ==============================================================================
 # TCT FULL MULTI-TENANT CONFIGURATION FILE (tctfile)
 # YAML Format | Supports up to 5 Bot Sessions
@@ -37,24 +38,24 @@ LOG_FILE_PATH: "data/app.log"
 LOG_LEVEL: "info"
 
 # ------------------------------------------------------------------------------
-# DATABASE SETTINGS 
+# DATABASE SETTINGS
 # ------------------------------------------------------------------------------
 DATABASE:
   # SYNC_MODE: "OFF" (fastest, riskier), "NORMAL" (balanced), "FULL" (safest).
   SYNC_MODE: "NORMAL"
-  
+
   # Number of operations to batch before flushing.
   BATCH_SIZE: 200
-  
+
   # Flush interval (milliseconds, or duration string like "5s").
   FLUSH_INTERVAL: "5000"
-  
+
   # Max memory for DB caching (default: 128MB).
   CACHE_MAX_BYTES: 134217728
-  
+
   # Enable WAL for better concurrency.
   USE_WAL: true
-  
+
   # Max wait time for a locked DB (ms).
   BUSY_TIMEOUT_MS: 15000
 
@@ -116,17 +117,17 @@ default_lock_system: &default_lock_system
   DELETE_WARN_AFTER: 3
 
 # ==============================================================================
-# BOTS CONFIGURATION (Maxi(set prefix to "null" or "none" for no prefix
+# BOTS CONFIGURATION (Max 5 Sessions; set prefix to "null" or "none" for no prefix)
 # ==============================================================================
 BOTS:
 
   # ========================================
-  # BOT 1: Primary (ACTIVE - Uncommented)
+  # BOT 1: Primary (ACTIVE )
   # ========================================
-  - SESSION_ID: "tct_236hgy"              
-    TIMEZONE: "Africa/Nairobi"             
-    PREFIX: "."                           
-    #OPENWEATHER_API_KEY: "your_key_here"  
+  - SESSION_ID: "tct_236hgy"
+    TIMEZONE: "Africa/Nairobi"
+    PREFIX: "."
+    #OPENWEATHER_API_KEY: "your_key_here"
 
     # Inherit default arrays using YAML aliases.
     ALIVE_IMAGES: *default_alive_images
@@ -134,18 +135,18 @@ BOTS:
     LOCK_SYSTEM: *default_lock_system
 
   # ========================================
-  # BOT 2: Secondary (ACTIVE )
+  # BOT 2: Secondary 
   # ========================================
-  - SESSION_ID: "tct_jjxjjx992"
-    TIMEZONE: "Africa/Nairobi"
-    PREFIX: "."
-    OPENWEATHER_API_KEY: "key_2"
-    ALIVE_IMAGES: *default_alive_images
-    WELCOME_IMAGES: *default_welcome_images
-    LOCK_SYSTEM: *default_lock_system
+  # - SESSION_ID: "tct_jjxjjx992"
+  #   TIMEZONE: "Africa/Nairobi"
+  #   PREFIX: "."
+  #   OPENWEATHER_API_KEY: "key_2"
+  #   ALIVE_IMAGES: *default_alive_images
+  #   WELCOME_IMAGES: *default_welcome_images
+  #   LOCK_SYSTEM: *default_lock_system
 
   # ========================================
-  # BOT 3: 
+  # BOT 3:
   # ========================================
   # - SESSION_ID: "tct_3_tertiary"
   #   TIMEZONE: "Asia/Tokyo"
@@ -156,7 +157,7 @@ BOTS:
   #   LOCK_SYSTEM: *default_lock_system
 
   # ========================================
-  # BOT 4: 
+  # BOT 4:
   # ========================================
   # - SESSION_ID: "tct_4_quart"
   #   TIMEZONE: "Europe/London"
@@ -167,7 +168,7 @@ BOTS:
   #   LOCK_SYSTEM: *default_lock_system
 
   # ========================================
-  # BOT 5: 
+  # BOT 5:
   # ========================================
   # - SESSION_ID: "tct_5_quint"
   #   TIMEZONE: "Australia/Sydney"
@@ -188,3 +189,4 @@ BOTS:
 #    huge lists. To customize images/locks for a specific bot, just replace the
 #    `*default_...` with your own list/map inside that bot's block.
 # ==============================================================================
+```
